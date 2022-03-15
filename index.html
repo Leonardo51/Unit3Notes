@@ -8,12 +8,14 @@
 <div id="parent">
     <input type="text" id="text1"/>
     <button id="button1">Button</button>
+    <button id="button2">2BUTTON</button>
 </div>
 <script>
     console.log('Hello console!-line 13');
 
     const inputElement = document.getElementById('text1');
     const buttonElement = document.getElementById('button1');
+    const button2Element = document.getElementById('button2');
 
     inputElement.addEventListener('change', function(e){
         console.log(`The value you entered is ${e.target.value}`);
@@ -49,6 +51,10 @@
 
     document.addEventListener('keydown', function (e){
         console.log(`You just hit the ${e.key} key`);
+    })
+
+    button2Element.addEventListener('click',function (e){
+        console.log('You clicked on second button')
     })
 
 </script>
