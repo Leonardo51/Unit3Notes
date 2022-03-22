@@ -2,62 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Change Contents</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="parent">
-    <input type="text" id="text1"/>
-    <button id="button1">Button</button>
-    <button id="button2">2BUTTON</button>
+<div class="container">
+    <div class="content">
+        <h1>Change Content Notes</h1>
+        <div class="row">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first_name" placeholder="Jane">
+            </div>
+            <div>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last_name" placeholder="Doe">
+            </div>
+            <p></p>
+        </div>
+    </div>
 </div>
 <script>
-    console.log('Hello console!-line 13');
-
-    const inputElement = document.getElementById('text1');
-    const buttonElement = document.getElementById('button1');
-    const button2Element = document.getElementById('button2');
-
-    inputElement.addEventListener('change', function(e){
-        console.log(`The value you entered is ${e.target.value}`);
-    })
-
-    inputElement.addEventListener('input', function(e){
-        console.log(`The value you entered is ${e.target.value}`);
-    })
-    const parentElement = document.getElementById('parent');
-    buttonElement.addEventListener('click', function (e){
-        console.log('You clicked on my button!');
-        e.stopPropagation();
-    })
-    parentElement.addEventListener('click', function (e){
-        console.log('You clicked on the parent containing div.');
-    })
-
-    buttonElement.addEventListener("mouseover", function (e){
-        console.log('Your mouse is on the button');
-    })
-
-    buttonElement.addEventListener('mouseout', function (e){
-        console.log('Your mouse is no longer on the button');
-    })
-
-    inputElement.addEventListener('focus', function (e){
-        console.log('You focused on the input');
-    })
-
-    inputElement.addEventListener('blur',function (e){
-        console.log('You stopped focusing on the input');
-    })
-
-    document.addEventListener('keydown', function (e){
-        console.log(`You just hit the ${e.key} key`);
-    })
-
-    button2Element.addEventListener('click',function (e){
-        console.log('You clicked on second button')
-    })
 
 </script>
-
 </body>
 </html>
