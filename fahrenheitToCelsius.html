@@ -27,13 +27,11 @@
     const calculateButton = document.getElementById('calc');
     const clearButton = document.getElementById('clear');
 
-    function convertToCelsius(fahrenheit){
-        let celsius = f-32/.5556;
-
-        if (celsius<=0){
+    function convertToCelsius(temp){
+        let celsius = (temp-32)*.5556;
+        if (celsius>=0){
             return true;
         }
-        return false;
     }
 
     function checkIsValid(num){
@@ -48,20 +46,17 @@
 
     calculateButton.addEventListener('click', function(e){
         let fahrenheitTemp = +f.value;
-
+        let newTemp = `${celu}`;
 
         if(!checkIsValid(fahrenheitTemp)){
             ans.textContent = "Invalid Inputs"
             return;
         }
-        if(convertToCelsius(fahrenheitTemp){
-            ans.textContent = "Yes, this makes a valid triangle";
-            return;
-        }
-        ans.textContent = "Valid inputs do NOT create a valid triangle"
+        if(convertToCelsius(fahrenheitTemp)){
+        ans.textContent = `${fahrenheitTemp} degrees fahrenheit is ${newTemp} degrees celsius.`}
     })
 
-    clearButton.addEventListener('click', function(e){
+    clearButton.addEventListener('click', function(e) {
         f.value = "";
         ans.textContent = "";
     })
