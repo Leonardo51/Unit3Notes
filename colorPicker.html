@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .red{
+            background-color: red;
+        }
+        .green{
+            background-color: green;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .orange{
+            background-color: #D68910;
+        }
+        .grey{
+            background-color: #949398FF;
+        }
+        .royalPurple{
+            background-color: #603F83FF;
+        }
+        .pink{
+            color:pink;
+        }
+        .teal{
+            color: teal;
+        }
+        .purple{
+            color: purple;
+        }
+        .white{
+            color: white;
+        }
+        .yellow{
+            color: #FEE715FF;
+        }
+        .islandGreen{
+            color: #2BAE66FF;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ac ut consequat
+           semper viverra nam libero justo laoreet. Odio morbi quis commodo odio
+           aenean sed. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu.
+        </p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">RED</button>
+            <button id="2">GREEN</button>
+            <button id="3">BLUE</button>
+            <button id="7">ORANGE</button>
+            <button id="9">GREY</button>
+            <button id="11">ROYAL PURPLE</button>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <button id="4">PINK</button>
+            <button id="5">TEAL</button>
+            <button id="6">PURPLE</button>
+            <button id="8">WHITE</button>
+            <button id="10">YELLOW</button>
+            <button id="12">ISLAND GREEN</button>
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+    const orange = document.getElementById('7');
+    const grey = document.getElementById('9');
+    const royalPurple = document.getElementById('11');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+    const white = document.getElementById('8');
+    const yellow = document.getElementById('10');
+
+    const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click',function(e){
+        removeBGColor();
+        content.classList.add('red');
+    })
+
+    orange.addEventListener('click',function(e){
+        removeBGColor();
+        content.classList.add('orange');
+    })
+
+    grey.addEventListener('click',function(e){
+        removeBGColor();
+        content.classList.add('grey');
+    })
+
+    green.addEventListener('click',function(e){
+        removeBGColor();
+        content.classList.add('green');
+    })
+
+    blue.addEventListener('click',function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    })
+
+    royalPurple.addEventListener('click',function(e){
+        removeBGColor();
+        content.classList.add('royalPurple');
+    })
+
+    pink.addEventListener('click',function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    })
+
+    teal.addEventListener('click',function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    })
+
+    purple.addEventListener('click',function(e){
+        removeTextColor();
+        content.classList.add('purple');
+    })
+
+    white.addEventListener('click',function(e){
+        removeTextColor();
+        content.classList.add('white');
+    })
+
+    yellow.addEventListener('click',function(e){
+        removeTextColor();
+        content.classList.add('yellow');
+    })
+
+    clearButton.addEventListener('click',function(e){
+        removeBGColor();
+        removeTextColor();
+    })
+
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+        content.classList.remove('orange');
+        content.classList.remove('grey')
+        content.classList.remove('royalPurple')
+    }
+
+    function removeTextColor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+        content.classList.remove('white');
+        content.classList.remove('yellow')
+    }
+</script>
+</body>
+</html>
