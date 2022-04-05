@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        img{
+            height: 200px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h2>CHOSE YOUR AVATAR</h2>
+        <img id="avatar" src="">
+        <div class="row">
+            <h3>Avatar</h3>
+            <button id="avatar1">AVATAR 1</button>
+            <button id="avatar2">AVATAR 2</button>
+            <button id="avatar3">AVATAR 3</button>
+            <button id="avatar4">AVATAR 4</button>
+            <button id="avatar5">AVATAR 5</button>
+            <button id="avatar6">AVATAR 6</button>
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const img1 = document.getElementById('avatar1')
+    const img2 = document.getElementById('avatar2')
+    const img3 = document.getElementById('avatar3')
+    const img4 = document.getElementById('avatar4')
+    const img5 = document.getElementById('avatar5')
+    const img6 = document.getElementById('avatar6')
+    const image = document.getElementById('avatar')
+
+    const clear = document.getElementById('clear')
+
+    img1.addEventListener('click',function(e){
+        image.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSweCYZ48Bf99ihSnPqBAXzCMH5ak-DsMk6Gg&usqp=CAU'
+    })
+
+    img2.addEventListener('click',function(e){
+        image.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCOFpADNNvJvHj3ZD33d3YbcWIxcmPoQKxtQ&usqp=CAU'
+    })
+
+    img3.addEventListener('click',function(e){
+        image.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStv4NYNwbC2H6wcxzScb0LvMdL1jxS3sm35w&usqp=CAU'
+    })
+
+    img4.addEventListener('click',function(e){
+        image.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3EImgGM9utxcx3kRS98zvy2EHUNl8cZeQgQ&usqp=CAU'
+    })
+
+    img5.addEventListener('click',function(e){
+        image.src=';oi'
+    })
+
+    img6.addEventListener('click',function(e){
+        image.src='98'
+    })
+
+    clear.addEventListener('click',function(e){
+        image.src = ""
+    })
+</script>
+</body>
+</html>
