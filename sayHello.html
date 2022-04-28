@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Say Hello</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <label for="first">First Name</label>
+            <input type="text" id="first">
+        </div>
+        <div class="row">
+            <label for="last">Last Name</label>
+            <input type="text" id="last">
+            <button id="sayHello">Say Hello</button>
+        </div>
+        <h3></h3>
+    </div>
+</div>
+<script>
+    const names = document.querySelector('h3')
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const button = document.getElementById('sayHello');
+
+    function addName(){
+        let first = firstName.value;
+        let last = lastName.value;
+        const newText = document.createElement('h3');
+        newText.innerHTML = `Hello ${first} ${last}`
+        names.insertAdjacentElement("afterend",newText);
+    }
+
+    button.addEventListener('click', addName);
+
+
+
+</script>
+</body>
+</html>
