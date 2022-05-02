@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Composite Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+
+    const newList = document.createElement('ul');
+    const newItem = document.createElement('li');
+    const anchor = document.createElement('a');
+
+    anchor.textContent = 'Click me';
+    anchor.href = 'http://www.google.com';
+    anchor.target = '_blank';
+
+    content.appendChild(newList);
+    newList.appendChild(newItem);
+    newItem.appendChild(anchor);
+</script>
+</body>
+</html>
