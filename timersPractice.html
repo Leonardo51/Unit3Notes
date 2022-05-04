@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <button id="remove">Remove Button</button>
+        <div>
+            <button id="colorChange">Background Color</button>
+            <button id="stopChange">Stop Background Change</button>
+        </div>
+    </div>
+</div>
+<script>
+    const removeButton = document.getElementById('remove');
+    const changeBackground = document.getElementById('colorChange');
+    const stopBackground = document.getElementById('stopChange');
+    let interval;
+
+    removeButton.addEventListener('click',function(){
+        setTimeout(function(){
+            removeButton.remove();
+        },3000);
+    })
+
+    changeBackground.addEventListener('click', function(){
+        if(!interval){
+            interval = setInterval(function(){
+                document.body.style.backgroundColor = 'white'
+                console.log('white')
+                document.body.style.backgroundColor = ' #17202a'
+                console.log('blue')
+            },5000);
+        }
+    })
+
+    stopBackground.addEventListener('click',function(){
+        if(interval){
+            clearInterval(interval);
+            interval = null;
+        }
+    })
+</script>
+</body>
+</html>
