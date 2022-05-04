@@ -50,6 +50,9 @@
     const submitButton = document.getElementById('submit');
     const incomplete = document.getElementById('incomplete');
     const complete = document.getElementById('complete');
+    let action;
+    let actionTag;
+    let newRow;
 
     submitButton.addEventListener('click', function(){
         let toDoItem = item.value;
@@ -57,9 +60,6 @@
         item.value = '';
     })
 
-    let action;
-    let actionTag;
-    let newRow;
 
     function addItemToIncompleteTable(toDoItem){
         addItemToTable(toDoItem);
