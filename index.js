@@ -40,6 +40,7 @@ cardList.addEventListener('click', function(e){
     totalScore.textContent =`SCORE: ${gameScore}`;
     let children = cardList.children;
     if (children.length<1){
+        totalScore.textContent = `YOUR TOTAL SCORE IS ${gameScore}!`;
         clearInterval(interval);
     }
 
