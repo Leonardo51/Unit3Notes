@@ -4,16 +4,6 @@ let gameScore = 0;
 
 buildBoard();
 
-function addScore(){
-    if (e= 'active'){
-        gameScore = gameScore+1;
-        totalScore.textContent=`${gameScore}`;
-
-    }else if (e='inactive'){
-        gameScore = gameScore+2;
-        totalScore.textContent=`${gameScore}`;
-    }
-}
 
 let interval = setInterval(function (){
     addCard(cardList.children.length+1)
@@ -35,16 +25,19 @@ function buildBoard(){
 
 cardList.addEventListener('click', function(e){
     console.log(e.target);
-    addScore();
     if(e.target.matches('.cardList')){
         return
     }
     if (e.target.classList.contains('active')){
+        gameScore = gameScore+1;
+        totalScore.textContent =`SCORE: ${gameScore}`;
         e.target.classList.remove('active');
         e.target.classList.add('inactive');
         return
     }
     e.target.remove();
+    gameScore = gameScore+2;
+    totalScore.textContent =`SCORE: ${gameScore}`;
     let children = cardList.children;
     if (children.length<1){
         clearInterval(interval);
