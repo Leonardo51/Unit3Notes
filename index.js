@@ -4,7 +4,6 @@ let gameScore = 0;
 
 buildBoard();
 
-
 let interval = setInterval(function (){
     addCard(cardList.children.length+1)
 },2000);
@@ -43,6 +42,4 @@ cardList.addEventListener('click', function(e){
         totalScore.textContent = `YOUR TOTAL SCORE IS ${gameScore}!`;
         clearInterval(interval);
     }
-
-
 })
